@@ -1,0 +1,33 @@
+<!--pages/comments.wxml-->
+<image class="background-img" src="../../images/comment-background.jpg"></image>
+<view class="comment">
+  <image class="comment-back" src="../../images/comment-card.png"></image>
+  <view class="details">
+    <text style="font-size: 25px; font-weight:10px; margin-bottom:20px;">丹丹小朋友的作品</text>
+    <text>阅读书籍:《魔法亲亲》</text>
+    <view class="score-date" style="margin-bottom:10px;">
+      <text style="float:left;">得分:{{item_1.score}}</text>
+      <text style="float:right; margin-left: 100px;">{{item_1.time}}</text>
+    </view>
+    <image src="{{item_1.img_answer}}"></image>
+    <text style="margin-top:10px;">教师评价:</text>
+    <text>{{item_1.comment}}</text>
+  </view>
+</view>
+<view class="bottom-bar">
+  <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="user-img"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+  <text style="font-size:15px; font-weight:bold;">丹丹</text>
+  <view class="like">
+    <image src="../../images/dianzan.png"></image>
+    <text>47</text>
+  </view>
+  <view class="share">
+    <image src="../../images/fenxiang.png"></image>
+    <text>分享</text>
+  </view>
+</view>

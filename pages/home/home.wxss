@@ -1,0 +1,127 @@
+/* pages/home/home.wxss */
+@import '/weui.wxss'; 
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result .weui-cell__bd{
+  padding: 2px 0 2px 20px;
+  color: #666;
+}
+.searchbar-result:before{
+    display: none;
+}
+.weui-search-bar{
+
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.background{
+  margin:1%;
+  border-radius: 40rpx;
+  width: 98%;
+  height: 460rpx;
+}
+.nav-item2{
+  width: 25%;
+  margin-top: 5px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+.coursetitle{
+  display: flex;
+  flex-direction: row;
+}
+.title{
+  padding-left:30rpx;
+  padding-top:30rpx;
+  color:black;
+  font-size: 35rpx;
+  font-family: "微软雅黑";
+}
+.more{
+  padding-top:43rpx;
+  padding-left: 230px;
+  color:gray;
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+}
+.image-group {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+}
+.courseimg {
+  display: inline-block;
+  margin: 15px;
+  border-radius: 20rpx;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-bottom-width: 7px;
+  border-right-width: 4px;
+  border-right-color: rgba(98,100, 110, 0.15);
+  border-bottom-color: rgba(98,100, 110, 0.15);
+}
+.name {
+  text-align: left;
+  font-size: 27rpx;
+  font-family: "微软雅黑";
+  padding-bottom: 5px;
+}
+.name2 {
+  text-align: left;
+  padding-bottom: 5px;
+  font-size: 23rpx;
+  font-family: "微软雅黑";
+  color: gray;
+}
+
+.recm_view {
+  width: 95%;
+  margin: auto;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-top: 20rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  -moz-box-shadow:0px 1px 5px #d0d0d0; -webkit-box-shadow:0px 1px 5px #d0d0d0; box-shadow:0px 1px 5px #d0d0d0;
+}
+
+.recm_view image { 
+  width: 120rpx;
+  height: 150rpx;
+  margin-left: 30rpx;
+  margin-right: 28rpx;
+}
+
+.recm_view .text_up {
+  font-size: 34rpx;
+  font-weight: 600;
+  letter-spacing: 2rpx;
+}
+
+.recm_view .text_down {
+  color: #BEBEBE;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.recm_view .recm_button {
+  width: 174rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  position: absolute;
+  right:30rpx;
+  background: #00C261;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.recm_view .recm_button:after {
+  border: none;
+}

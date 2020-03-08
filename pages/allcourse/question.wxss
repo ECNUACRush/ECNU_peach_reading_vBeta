@@ -1,0 +1,71 @@
+/* pages/allcourse/question.wxss */
+
+.choice {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hobby1 {
+    color: #ffffff;
+    border-radius: 60rpx;
+    margin-bottom: 10px;
+    font-size: 36rpx;
+}
+
+.hobby2 {
+    color: #ffffff;
+    border-radius: 60rpx;
+    margin-bottom: 10px;
+    font-size: 36rpx;
+}
+
+.hobby3 {
+    color: #ffffff;
+    border-radius: 60rpx;
+    margin-bottom: 10px;
+
+}
+
+.hobby4 {
+    color: #ffffff;
+    border-radius: 60rpx;
+    margin-top: 10px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.btn_submit {
+    background: rgba(84, 176, 238, 0.815);
+    color: #ffffff;
+    border-radius: 30rpx;
+    margin-top: 10rpx;
+    width: 40%;
+}
+
+.title {
+    color: #ffffff;
+    display: inline-block;
+    margin-top: 90px;
+    margin-bottom: 10px;
+    margin-left: 350rpx;
+    margin-right: 40rpx;
+    font-size: 25rpx;
+}
+
+.question {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    margin-bottom:20rpx;
+    font-size: 46rpx;
+}

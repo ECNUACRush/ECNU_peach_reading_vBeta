@@ -1,0 +1,22 @@
+<!--pages/user/register2.wxml-->
+<view class="main">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="main_text">
+      <view class="background">
+        <image src="/images/background.jpg" style="height:100%;width:100%;"></image>
+      </view>
+      <text class="title">桃子阅读</text>
+      <text class="title1">请告诉我孩子喜欢的三个兴趣吧！</text>
+      <view class="hobby_1">
+        <button class="hobby1" plain="{{plain1}}" bindtap="story">童话</button>
+        <button class="hobby2" plain="{{plain2}}" bindtap="life">生活</button>
+      </view>
+      <view class="hobby_2">
+        <button class="hobby1" plain="{{plain3}}" bindtap="skill">才艺</button>
+        <button class="hobby2" plain="{{plain4}}" bindtap="nature">大自然</button>
+      </view>
+      <button class="hobby1" plain="{{plain5}}" bindtap="science">科普</button>
+      <button class="login_btu" form-type="submit">下一步</button>
+    </view>
+  </form>
+</view>

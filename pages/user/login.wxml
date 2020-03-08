@@ -1,0 +1,11 @@
+<!--pages/user/login.wxml-->
+<view class="main">
+  <view class="main_text">
+    <view class="background">
+      <image src="/images/background.jpg" style="height:100%;width:100%;"></image>
+    </view>
+    <text class="title">桃子阅读</text>
+    <text class="title1">孩子喜欢的学习课程</text>
+  </view>
+    <button class="page-body-button" type="primary" bindgetuserinfo="sub" open-type="getUserInfo">微信登录</button>
+</view>

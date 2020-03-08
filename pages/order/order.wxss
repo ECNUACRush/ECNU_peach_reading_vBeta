@@ -1,0 +1,40 @@
+page{
+  background: #f6f6f6;
+}
+.orders{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order{
+  width: 90%;
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.order image{
+  margin-left: 20px;
+  width: 300rpx;
+  height: 300rpx;
+}
+.details{
+  display: flex;
+  flex-direction: row;
+}
+.words{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.order text{
+  width: 100%;
+  color: black;
+  font-size: 16px;
+}

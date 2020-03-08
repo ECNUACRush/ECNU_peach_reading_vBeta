@@ -1,0 +1,140 @@
+<!--pages/allcourse/allcourse.wxml <navigator url="course?id={{items.id}}" hover-class="navigator-hover"> -->
+
+<view class="lunbo">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}"  indicator-color="{{beforeColor}}" indicator-active-color="{{afterColor}}" class="background">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="background" bindtap="swipclick" mode="scaleToFill"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">桃桃绘本</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">3-6岁</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">7-9岁</view>  
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">10-12岁</view>  
+</view>  
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+
+    <swiper-item>
+    
+      <block wx:for="{{items_1}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+
+      <block wx:for="{{items_2}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+
+    <block wx:for="{{items_3}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+    
+    <block wx:for="{{items_3}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+
+    </swiper-item>  
+
+
+    <swiper-item>  
+
+      <block wx:for="{{items_1}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+
+    </swiper-item>  
+
+    <swiper-item>  
+      <block wx:for="{{items_2}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+
+    </swiper-item>  
+
+    <swiper-item>  
+
+      <block wx:for="{{items_4}}" wx:key="id">
+        <navigator url="detailcourse?courseid={{item.id}}" hover-class="navigator-hover">
+          <view class="list">
+            <view><image class="course_img" style="height:240rpx;width:180rpx;" src="{{item.img_url}}"></image></view>
+            <view class="des">
+              <view class="course_title">{{item.title}}</view>
+              <view class="course_introduction">
+                <text>{{item.introduction}}</text>
+              </view>
+            </view>
+          </view>
+        </navigator> 
+      </block>
+      
+     </swiper-item> 
+</swiper>
+
+<view class="coursetitle">
+  <text class="title">阅读Tips</text>
+  <text class="more" bindtap="go1">更多</text>
+</view>

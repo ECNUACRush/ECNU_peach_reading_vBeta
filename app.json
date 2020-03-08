@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/user/login",
+    "pages/allcourse/allcourse",
+    "pages/allcourse/detailcourse",
+    "pages/home/home",
+    "pages/user/register",
+    "pages/user/register2",
+    "pages/user/register3",
+    "pages/course/course",
+    "pages/me/me",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/comments/comments",
+    "pages/allcourse/question"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "桃言阅读",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#696969",
+    "selectedColor": "#87CEFA",
+    "backgroundColor": "white",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "images/zhuye0.png",
+        "selectedIconPath": "images/zhuye1.png"
+      },
+      {
+        "pagePath": "pages/allcourse/allcourse",
+        "text": "全部课程",
+        "iconPath": "images/course.png",
+        "selectedIconPath": "images/course1.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "我的课程",
+        "iconPath": "images/Book.png",
+        "selectedIconPath": "images/Book1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人中心",
+        "iconPath": "images/user1.png",
+        "selectedIconPath": "images/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

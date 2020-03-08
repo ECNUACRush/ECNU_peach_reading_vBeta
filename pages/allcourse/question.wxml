@@ -1,0 +1,20 @@
+<!--pages/allcourse/question.wxml-->
+<view class="main">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    
+      <view class="background">
+        <image src="https://www.peachreading.cn/student/img?imgname=problemback.jpg" style="height:100%;width:100%;"></image>
+      </view>
+
+      <text class="title">({{idx + 1}} / {{ob_len}})</text>
+
+      <text class="question">{{tmp_questions.problem}}</text>
+      <view class="choice">
+        <button class="hobby1" plain="{{plain1}}" bindtap="choice_0" style="background: {{bg1}};">A:{{tmp_questions.choice0}}</button>
+        <button class="hobby2" plain="{{plain2}}" bindtap="choice_1" style="background: {{bg2}};">B:{{tmp_questions.choice1}}</button>
+        <button class="hobby1" plain="{{plain3}}" bindtap="choice_2" style="background: {{bg3}};">C:{{tmp_questions.choice2}}</button>
+        <button class="hobby2" plain="{{plain4}}" bindtap="choice_3" style="background: {{bg4}};">D:{{tmp_questions.choice3}}</button>
+        <button class="btn_submit" form-type="submit">下一题</button>
+      </view>
+  </form>
+</view>

@@ -1,0 +1,132 @@
+/* pages/course/course.wxss */
+
+.play_icon {
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    left: 75rpx;
+}
+
+.navi {
+    border: 4rpx solid #e5e5e5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.display {
+    width: 200rpx;
+    height: 150rpx;
+    top: 12rpx;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.h_class {
+    background-color: blue;
+    opacity: 0.5;
+}
+
+.box {
+    background-color: green;
+    font-size: 30rpx;
+}
+
+.my_block {
+    display: flex;
+    flex-direction: row;
+}
+
+.my_lover {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.swiper-tab {
+    width: 100%;
+    text-align: center;
+    line-height: 60rpx;
+}
+
+.swiper-tab-list {
+    font-size: 30rpx;
+    display: inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 20%;
+    color: #777777;
+}
+
+.on {
+    color: #87CEFA;
+    border-bottom: 5rpx solid #87CEFA;
+}
+
+.swiper-box {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.item1 {
+    display: flex;
+    padding-top: 4px;
+    margin: 10px;
+}
+
+.title1 {
+    color: black;
+    font-size: 15px;
+    font-family: "微软雅黑";
+}
+
+.orders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order {
+    width: 90%;
+    background-color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.order image {
+    margin-left: 20px;
+    width: 300rpx;
+    height: 300rpx;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+.words {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order text {
+    width: 100%;
+    color: black;
+    font-size: 16px;
+}

@@ -1,0 +1,546 @@
+/* pages/allcourse/detailcourse.wxss */
+
+
+/*.intro {
+    display: flex;
+    flex-direction: row;
+}*/
+
+.intro_list {
+    width: 105%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tag {
+    background-color: #F6f7f6;
+    color: #A2A2A2;
+    font-size: 26rpx;
+    margin: auto;
+    height: 60rpx;
+}
+
+.r_tag {
+    background-color: #07c160;
+    color: #ffffff;
+    font-size: 24rpx;
+    margin-left: 100rpx;
+    height: 60rpx;
+}
+
+.divide {
+    border-width: 1px;
+    border-color: gainsboro;
+    border-style: solid;
+}
+
+.pay-hint-my-content {
+    margin-left: 5%;
+    margin-right: 0%;
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    color: #888;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pay-hint-content {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #888;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.ellipsis {
+    -webkit-line-clamp: 1;
+    opacity: 0.75
+}
+
+.unellipsis {
+    -webkit-line-clamp: 0;
+    opacity: 1
+}
+
+.bicon {
+    height: 50rpx;
+    width: 50rpx;
+    margin-left: 20px;
+    margin-right: 10rpx;
+}
+
+.icon {
+    height: 50rpx;
+    width: 50rpx;
+    margin-right: 20rpx;
+}
+
+.t_icon {
+    height: 50rpx;
+    width: 50rpx;
+    margin-right: 20rpx;
+    margin-left: 52rpx;
+}
+
+.my_intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.Tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    margin-left: 15px;
+}
+
+.teacher_tr {
+    width: 100%;
+    height: 200rpx;
+    background-color: #FAFBFC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.teacher {
+    margin-bottom: 10rpx;
+    margin-right: 175rpx;
+    background-color: #FAFBFC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.t_name {
+    color: #000000;
+    font-size: 20px;
+    margin-right: 15rpx;
+}
+
+.tr {
+    width: 100%;
+    height: 100rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.td {
+    font-weight: bold;
+    flex: 1;
+    margin-left: 60rpx;
+    color: #A2A2A2;
+    padding: 10rpx;
+    width: 50%;
+    font-size: 26rpx;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    border-top: 2rpx solid rgba(98, 100, 110, 0.2);
+    background-color: white;
+}
+
+.bottom_icons1 {
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+
+.bottom_dec1 {
+    margin-top: 26rpx;
+    margin-left: 60rpx;
+    font-family: "微软雅黑";
+    font-size: 30rpx;
+    color: gray;
+}
+
+.bottom_icons2 {
+    margin-top: 20rpx;
+    margin-left: 60rpx;
+}
+
+.bottom_dec2 {
+    margin-top: 26rpx;
+    font-family: "微软雅黑";
+    margin-left: 60rpx;
+    font-size: 30rpx;
+    color: gray;
+}
+
+.buy {
+    margin-bottom: 16rpx;
+    width: 55%;
+    font-size: 34rpx;
+    background: #4F94CD;
+    color: white;
+    margin-top: 16rpx;
+}
+
+.swiper-tab {
+    width: 100%;
+    text-align: center;
+    line-height: 60rpx;
+    border-bottom: 1rpx solid rgba(98, 100, 110, 0.2);
+    border-top: 12rpx solid rgba(182, 182, 185, 0.1);
+}
+
+.swiper-tab-list {
+    font-size: 30rpx;
+    display: inline-block;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 20%;
+    color: #777777;
+}
+
+.on {
+    color: #87CEFA;
+    border-bottom: 7rpx solid #87CEFA;
+}
+
+.swiper-box {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.item1 {
+    display: flex;
+    padding-top: 4px;
+    margin: 10px;
+}
+
+.title1 {
+    color: black;
+    font-size: 15px;
+    font-family: "微软雅黑";
+}
+
+.detail_top {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail_img {
+    margin: 5%;
+    border-radius: 20rpx;
+}
+
+.detail_doc {
+    margin-top: 5rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail_title {
+    margin-top: 36rpx;
+    font-family: "微软雅黑";
+    font-size: 32rpx;
+    color: black;
+}
+
+.detail_writer {
+    margin-top: 10rpx;
+    font-family: "微软雅黑";
+    font-size: 22rpx;
+    color: gray;
+}
+
+.detail_introduce {
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #A2A2A2;
+}
+
+.itrtitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rpx;
+    font-size: 32rpx;
+}
+
+.itrmain {
+    margin-top: 20rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    font-size: 25rpx;
+    color: gray;
+}
+
+.aftitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    font-size: 32rpx;
+}
+
+.problem {
+    font-size: 30rpx;
+    color: gray;
+    margin: 10rpx;
+}
+
+.new_ans {
+    flex-direction: column;
+    line-height: 1.5em;
+    font-size: 28rpx;
+    color: gray;
+    margin: 20rpx;
+}
+
+.ans {
+    display: flex;
+    flex-direction: column;
+    font-size: 28rpx;
+    color: gray;
+    margin: 20rpx;
+}
+
+.checkbox {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.objtitle {
+    font-size: 30rpx;
+}
+
+.subtitle {
+    font-size: 30rpx;
+}
+
+.uploadimg {
+    margin-bottom: 16rpx;
+    width: 55%;
+    font-size: 34rpx;
+    background: rgba(245, 160, 178, 0.8);
+    color: white;
+    margin-top: 126rpx;
+}
+
+.my_uploadimg {
+    margin-bottom: 6rpx;
+    width: 55%;
+    font-size: 34rpx;
+    background: rgba(245, 160, 178, 0.8);
+    color: white;
+    margin-top: 26rpx;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx;
+    border-radius: 20rpx;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 7px;
+    border-right-width: 5px;
+    border-right-color: rgba(98, 100, 110, 0.15);
+    border-bottom-color: rgba(98, 100, 110, 0.15);
+}
+
+.itro {
+    display: flex;
+    flex-direction: column;
+}
+
+.high {
+    height: 1500px;
+}
+
+.classimg {
+    display: flex;
+    justify-content: center;
+}
+
+.class_img {
+    display: flex;
+    flex-direction: row;
+    margin: 0rpx 10rpx 0rpx 10rpx;
+    border-radius: 20rpx;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-bottom-width: 7px;
+    border-right-width: 5px;
+    border-right-color: rgba(98, 100, 110, 0.15);
+    border-bottom-color: rgba(98, 100, 110, 0.15);
+}
+
+
+/*radio未选中时样式 */
+
+radio .wx-radio-input {
+    /* 自定义样式.... */
+    /* 我这里没有进行，未选中的样式修改
+  height: 40rpx; 
+  width: 40rpx;
+  margin-top: -4rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+  
+   */
+    background: transparent;
+    background-image: "/images/background.jpg"
+}
+
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked {
+    /* border: none; */
+    border-color: #2792ff!important;
+    /* background-color: #fff!important; */
+    /* background-color: transparent!important; */
+    /* 居中 */
+    /* 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+}
+
+
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+    /* 去除对号 */
+    content: '';
+    /* background: #fff; */
+    width: 36rpx;
+    height: 36rpx;
+    border-radius: 50%;
+    /* background: red; */
+    background-color: #2792ff;
+    /* 居中 */
+    /* margin-top: 0rpx; */
+    /* display: flex; */
+    /* position: relative; */
+}
+
+.flex {
+    flex-direction: row;
+}
+
+.flex .item {
+    flex: 1
+}
+
+.service_selection {
+    padding: 15px 10px;
+    background: #fff;
+}
+
+.service_selection label {
+    background: #cf238a;
+    padding: 6px 7px;
+    font-size: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.service_selection .is_checked {
+    border: 1px solid #fe002a;
+    color: #00fe4c;
+    background: #fff;
+}
+
+.service_selection .is_picked {
+    border: 1px solid #fe0002;
+    color: #fe0002;
+    background: #fff;
+}
+
+.btn_switchob {
+    background: rgba(84, 176, 238, 0.815);
+    color: #ffffff;
+    border-radius: 30rpx;
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+    width: 90%;
+}
+
+.questions-condition {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 24px;
+}
+
+.question-category {
+    font-size: 15px;
+    color: #5B5B5B;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.question-condition {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.question {
+    font-size: 15px;
+    color: #5B5B5B;
+}
+
+.condition {
+    font-size: 15px;
+    color: #5B5B5B;
+    margin-left: auto;
+}
+
+.navigate-part {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    border-top: gainsboro solid 2px;
+    width: 90%;
+    margin-left: 5%;
+    background-color: white;
+}
+
+.back-to-course {
+    font-size: 15px;
+    color: gainsboro;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.go-to-answer {
+    font-size: 15px;
+    color: white;
+    background-color: gray;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}

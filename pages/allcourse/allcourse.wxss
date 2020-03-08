@@ -1,0 +1,99 @@
+/* pages/allcourse/allcourse.wxss */
+@import '/weui.wxss'; 
+.searchbar-result{
+    margin-top: 0;
+    font-size: 14px;
+}
+.searchbar-result .weui-cell__bd{
+  padding: 2px 0 2px 20px;
+  color: #666;
+}
+.searchbar-result:before{
+    display: none;
+}
+.suo{
+  padding-top: 15rpx;
+  margin-right: 80rpx;
+  border-bottom: 2rpx solid #DCDCDC;
+}
+.swiper-tab{  
+    width: 100%;  
+    text-align: center;  
+    line-height: 60rpx;
+}  
+.swiper-tab-list{  
+    font-size: 30rpx;  
+    margin: 2%;
+    display: inline-block; 
+    width: 20%;  
+    color: #777777;  
+}  
+.on{
+  color: #87CEFA	;  
+  border-bottom: 5rpx solid #87CEFA;
+}  
+.swiper-box{ display: block; height: 100%; width: 100%; overflow: hidden; }  
+.item1{
+  display: flex;
+  padding-top: 4px;
+  margin: 10px;
+}
+.title1{
+  color:black;
+  font-size: 15px;
+  font-family: "微软雅黑";
+}
+.background{
+  margin:1%;
+  border-radius: 40rpx;
+  width: 98%;
+  height: 460rpx;
+}
+.title{
+  padding-left:30rpx;
+  padding-top:30rpx;
+  color:black;
+  font-size: 35rpx;
+  font-family: "微软雅黑";
+}
+.more{
+  padding-top:43rpx;
+  padding-left: 230px;
+  color:gray;
+  font-size: 25rpx;
+  font-family: "微软雅黑";
+}
+.list{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+  border-radius: 20rpx;
+  border-bottom-style: solid;
+  border-right-style: solid;
+  border-bottom-width: 7px;
+  border-right-width: 5px;
+  border-right-color: rgba(98,100, 110, 0.15);
+  border-bottom-color: rgba(98,100, 110, 0.15);
+}
+.course_img{
+  margin-left: 5rpx;
+}
+.course_title{
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  width: 100%;
+}
+.des{
+  display: flex;
+  flex-direction: column;
+  height: 240rpx;
+}
+.course_introduction{
+  font-size: 22rpx;
+  margin-left: 20rpx;
+  margin-top: 16rpx;
+  color: gray;
+  overflow: hidden;
+}

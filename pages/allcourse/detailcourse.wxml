@@ -1,0 +1,193 @@
+<!--pages/allcourse/detailcourse.wxml-->
+
+<view class="detail_top">
+  <image class="detail_img" src="{{item1.img_url}}" style="width:110px;height:150px;" mode="scaleToFill"></image>
+  <view class="detail_doc">
+    <text class="detail_title">{{item1.title}}</text>
+    <text class="detail_writer">奥黛丽.潘恩</text>
+
+  </view>
+</view>
+
+<!--介绍模块-->
+<view class='bg-white marginTop10 vertical'>
+  <view class='tr'>
+    <text class='td'>内容概要</text>
+    <view class='bg-white-ellipsis' bindtap='ellipsis'>
+      <image class='icon' src="{{ellipsis?'../../images/ellipsis.png':'../../images/unellipsis.png'}}"></image>
+    </view>
+  </view>
+  <view class='divide'></view>
+
+<view class="pay-hint-content {{ellipsis?'ellipsis':'unellipsis'}}">
+    <text>这是一个传递亲情与爱的故事。小浣熊不愿意去上学，因为他不愿意离开妈妈去一个陌生的环境，妈妈向他保证，他一定会喜欢新学校，并告诉他一个秘密：“魔法亲亲”，妈妈在小浣熊的掌心印上一个吻。</text>
+</view>
+<view class="pay-hint-my-content {{ellipsis?'ellipsis':'unellipsis'}}">   
+   <view class='intro_list'>
+    <button class='tag' hidden="{{introduce}}" disabled = 'true'>0-3岁</button>
+    <button class='tag' hidden="{{introduce}}" disabled = 'true'>绘本课程</button>
+    <button class='tag' hidden="{{introduce}}" disabled = 'true'>最新</button>
+    <button class='r_tag' hidden="{{introduce}}" bindtap = 'buycourse'>分享免费试读</button>  
+  </view>
+</view> 
+    
+  
+</view>
+
+<!--目前以图片为例-->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">课程</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">课后习题</view>  
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+
+<!--介绍-->
+    <!--
+    <swiper-item> 
+      <scroll-view scroll-y style="width: 100%; height: 100%;">
+        <image src="https://www.peachreading.cn/student/img?imgname=kiss1.jpg" mode="widthFix" style="width:100%;"></image>
+        <image src="https://www.peachreading.cn/student/img?imgname=kiss2.jpg" mode="widthFix" style="width:100%;"></image>
+        <image src="https://www.peachreading.cn/student/img?imgname=kiss3.jpg" mode="widthFix" style="width:100%;"></image>
+        <image src="https://www.peachreading.cn/student/img?imgname=kiss4.jpg" mode="widthFix" style="width:100%;"></image>
+      </scroll-view>
+    </swiper-item>  
+    -->
+<!--课程-->
+    <swiper-item>  
+
+      <view class="background">
+        <image src="/images/background.jpg" style="height:100%;width:100%;"></image>
+      </view>
+
+      <navigator url="class?courseid={{item.id}}" hover-class="navigator-hover">
+      <view class="classimg">
+        <audio class="class_img" name="{{song}}" poster="{{item1.img_url}}" src="https://www.peachreading.cn/student/audio/audioname=mofaqinqin.mp3" action="{{audioAction}}" bindplay="audioPlayed" controls></audio>
+      </view>
+      </navigator>
+
+    <view class='teacher_tr'>
+      <image class='t_icon' src="../../images/nav_user_1.png"></image>
+      <view class='Tr'>
+        <view class='teacher'>
+          <text class='t_name'>梅紫燕</text>
+          <image class='icon' src="../../images/certification.png"></image>
+        </view>
+        <text style="color:#A2A2A2;font-size: 12px;top:10px;margin-right:30rpx">上海第六师范附属小学语文老师</text>
+      </view>
+    </view>
+
+
+
+    </swiper-item>  
+<!--课后习题-->
+    <swiper-item> 
+      <view class="questions-condition">
+        <text class="question-category">客观题：</text>
+        <view class="question-condition">
+          <text class="question">第一题</text>
+          <text class="condition">未答</text>
+        </view>
+        <view class="question-condition">
+          <text class="question">第二题</text>
+          <text class="condition">已上传</text>
+        </view>
+
+        <text class="question-category">主观题：</text>
+        <view class="question-condition">
+          <text class="question">第一题</text>
+          <text class="condition">已上传</text>
+        </view>
+        <view class="question-condition">
+          <text class="question">第二题</text>
+          <text class="condition">未答</text>
+        </view>
+        <view class="question-condition">
+          <text class="question">第三题</text>
+          <text class="condition">未答</text>
+        </view>
+        <view class="question-condition">
+          <text class="question">第四题</text>
+          <text class="condition">未答</text>
+        </view>
+        <view class="question-condition">
+          <text class="question">第五题</text>
+          <text class="condition">未答</text>
+        </view>
+        
+      </view>
+
+    </swiper-item>  
+
+</swiper>  
+
+<view class="navigate-part">
+  <text class="back-to-course">返回课程</text>
+  <button class="go-to-answer">立即开始答题吧</button>
+</view>
+<!--
+<view class="bottom" style="width:100%;height:60px;position:fixed;bottom:0;">
+  <button class="buy"  bindtap="buycourse">参加课程</button>
+</view>
+-->
+
+
+
+<!--
+<view class="detail_top">
+  <image class="detail_img" src="{{item1.img_url}}" style="width:110px;height:150px;" mode="scaleToFill"></image>
+  <view class="detail_doc">
+    <text class="detail_title">{{item1.title}}</text>
+    <text class="detail_writer">奥黛丽.潘恩</text>
+  </view>
+</view>
+
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">介绍</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">课程</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">课后习题</view>  
+</view>  
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+
+<!--介绍-->
+<!--    <swiper-item>  
+
+      <view class="itrtitle">故事简介</view>
+      <view class="itrmain">
+        <text decode="{{true}}">{{item1.intro}}</text>
+      </view>
+    </swiper-item>  
+<!--课程-->
+<!--    <swiper-item>  
+
+      <view class="coursetitle">课程列表</view>
+      <view>
+      <video src="{{item1.vedio_url}}"></video>
+      </view>  
+
+    </swiper-item>  
+<!--课后习题-->
+<!--    <swiper-item> 
+      <view class="aftitle">课后习题</view>
+        <text class="objtitle">一、选择题 </text>
+
+        <view  wx:for="{{ob}}" wx:key="id" wx:for-index="idx">
+          <radio-group bindchange="radioChange" class="ans">
+              <view class="problem">{{idx+1}}. {{item.problem}}</view>
+              <radio value="{{item.choice0}}" >A.{{item.choice0}}</radio>
+              <radio value="{{item.choice1}}" >B.{{item.choice1}}</radio>
+              <radio value="{{item.choice2}}" >C.{{item.choice2}}</radio>
+              <radio value="{{item.choice3}}" >D.{{item.choice3}}</radio>
+          </radio-group>
+         </view>
+        
+        <text class="subtitle">二、主观题（请将答案写在纸上标号题目再上传哦~）</text>
+        <text class="ans" decode="{{true}}" wx:for-index="idx">{{idx}}{{item1.sub}}</text>
+        <button class="uploadimg" bindtap='chooseImageTap'>上传图片</button>
+
+    </swiper-item>  
+
+</swiper>  
+
+<view class="bottom" style="width:100%;height:60px;position:fixed;bottom:0;">
+  <button class="buy"  bindtap="buycourse">参加课程</button>
+</view>

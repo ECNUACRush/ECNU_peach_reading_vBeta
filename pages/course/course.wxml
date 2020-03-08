@@ -1,0 +1,71 @@
+<!--pages/course/course.wxml-->
+
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">我的学习</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已学课程</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">我的能力</view>  
+</view>  
+
+
+<navigator url="class?courseid={{item.id}}" hover-class="navigator-hover">
+  <audio class="navi" url="http://5.1015600.com/2014/ring/000/118/28b0e17cfab0136677648b39cb8b7fbc.mp3" action="{{audioAction}}" bindplay="audioPlayed" controls></audio>
+</navigator>
+
+  
+<!--当前为停止状态  -->
+<view class="navi">
+  <view class="display" wx:if="{{isplay==false}}" bindtap='play'>
+    <image class="play_icon" src='../../images/play.png' />
+  </view>
+  <!--当前为播放状态  -->
+  <view class="display" wx:if="{{isplay==true}}" bindtap='stop'>
+    <image class="play_icon" src='../../images/stop.png' />
+  </view>
+  <slider style="width:300rpx;margin-left:50rpx;"></slider>
+</view>
+
+<view hidden = "{{false}}" class = "my_lover" >
+  hello world!
+  <view hidden = "{{lover == 'nancy'}}">  he is a boy {{isboy}}  </view>
+  <view wx:if = "{{lover == 'nancy'}}">  his name is "{{person_name.name}}" </view>
+</view>
+
+<view class = "my_lover">
+  
+  <view wx:for="{{arr}}" wx:key="index" style="background-color: yellow; color:{{my_color}}">
+    {{index}}: {{item}}
+  </view>
+  <view hover-class="h_class" class="{{my_box}}" bindtap="go1" wx:for="{{person_name}}" wx:key="index">
+    {{index}}: {{item}}
+  </view>
+  <block class="my_block" wx:for="{{person_name}}" wx:key="index" wx:for-index="key" wx:for-item='it'>
+    {{key}}: {{it}}
+  </block>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">  
+    <swiper-item>  
+      <!--view class="item1">
+        <text class="title1">你喜欢的知识都在这里</text>
+      </view-->  
+      <view class="order" wx:for="{{item_1}}" wx:key="none">
+      <navigator url="../comments/comments?idx={{index}}" hover-class="navigator-hover">
+        <text style="font-size: 20px;margin-left:20px;margin-bottom:5px;">序号{{index+1}}</text>
+        <view class="details">
+          <image src="{{item.img_answer}}"></image>
+          <view class="words">
+            <text>书名：{{item.name}}</text>
+            <text>上传时间：{{item.time}}</text>
+            <text>得分: {{item.score}}</text>
+          </view>
+        </view>
+      </navigator>
+      </view>
+    </swiper-item>  
+    <swiper-item>  
+      <view></view>  
+    </swiper-item>  
+    <swiper-item>  
+      <view></view>  
+    </swiper-item>  
+</swiper>  

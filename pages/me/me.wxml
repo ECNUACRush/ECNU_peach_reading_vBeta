@@ -1,0 +1,76 @@
+<!--pages/me/me.wxml-->
+  <view class='card-top'>
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view class="userinfo-nickname">
+      <view class="name">{{userInfo.nickName}}</view>
+      <view class='btn-green' bindtap='goToQuery'>阅力评测</view>
+    </view>
+  </view>
+
+  <view class='card'>
+  <view class='records'>
+    <view class='record' id='today'>
+    <view class='category-view'><text class='category'>今日学习</text></view>
+    <text class='number'>0</text><text class='unit'>分钟</text>
+    </view>
+    <view class='record' id='continue'>
+    <view class='category-view'><text class='category'>连续学习</text></view>
+    <text class='number'>1</text><text class='unit'>天</text>
+    </view>
+    <view class='record' id='accumulate'>
+    <view class='category-view'><text class='category'>累计播放</text></view>
+    <text class='number'>9</text><text class='unit'>条</text>
+    </view>
+  </view>
+  </view>
+
+  <view class='advertisement'>
+    <image src="../../images/taozi.png"></image>
+  </view>
+
+<view class='card-top'>
+  <view class='card-info'>
+    <view class='table'>
+      <view class='tr'>
+        <!--<view class='td'>积分：{{credits}}</view>-->
+         <view><image src='../../images/dingdan.png' class='bicon'></image></view>
+         <view class='td' bindtap="goToOrder">订单</view>
+         <view><image src="../../images/jiantou.png" class='icon'></image></view>
+      </view>
+      <view class='tr'>
+        <!--<view class='td'>积分：{{credits}}</view>-->
+         <view><image src='../../images/yixiangkan.png' class='bicon'></image></view>
+         <view class='td'>已读书籍</view>
+         <view><image src="../../images/jiantou.png" class='icon'></image></view>
+      </view>
+      <view class='tr'>
+        <!--<view class='td'>积分：{{credits}}</view>-->
+         <view><image src='../../images/shandian.png' class='bicon'></image></view>
+         <view class='td'>即将上新</view>
+         <view><image src="../../images/jiantou.png" class='icon'></image></view>
+      </view>
+      <view class='divide'></view>
+      <view class='tr'>
+        <!--<view class='td'>积分：{{credits}}</view>-->
+         <view><image src='../../images/wode.png' class='bicon'></image></view>
+         <view class='td'>我的信息</view>
+         <view><image src="../../images/jiantou.png" class="icon"></image></view>
+      </view>
+      <view class='tr'>
+        <!--<view class='td'>积分：{{credits}}</view>-->
+         <view><image src='../../images/bianji.png' class='bicon'></image></view>
+         <view class='td'>设置</view>
+         <view><image src="../../images/jiantou.png" class="icon"></image></view>
+      </view>
+    </view>
+  </view>  
+</view>
+
+</view>

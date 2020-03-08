@@ -1,0 +1,20 @@
+<!--pages/user/register.wxml-->
+<view class="main">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="main_text">
+      <view class="background">
+        <image src="/images/background.jpg" style="height:100%;width:100%;"></image>
+      </view>
+      <text class="title">桃子阅读</text>
+      <text class="title1">孩子喜欢的学习课程</text>
+      <view class="sex">
+        <button class="sexbtu1" plain="{{plain1}}" bindtap="male">男孩</button>
+        <button class="sexbtu2" plain="{{plain2}}" bindtap="female">女孩</button>
+      </view>
+      <input name="age" class="input" placeholder="请输入孩子的年龄"></input>
+      <view>
+        <button class="login_btu" form-type="submit">下一步</button>
+      </view>
+    </view>
+  </form>
+</view>
