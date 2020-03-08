@@ -116,7 +116,6 @@
 
 .teacher {
     margin-bottom: 10rpx;
-    margin-right: 175rpx;
     background-color: #FAFBFC;
     display: flex;
     flex-direction: row;
@@ -128,6 +127,7 @@
     color: #000000;
     font-size: 20px;
     margin-right: 15rpx;
+    /*  老师名字和名片间距  */
 }
 
 .tr {
