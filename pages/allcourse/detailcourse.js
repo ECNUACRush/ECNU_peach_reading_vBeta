@@ -5,10 +5,13 @@ Page({
         audioAction: {
             method: 'pause'
         },
+        lock: 0, // true：锁定状态，否则为解锁状态。
         song: "魔法亲亲",
         current_courseid: 0, //课程编号
         introduce: true,
         ellipsis: true, // 文字是否收起，默认收起
+        course: 1, // 控制底部navigator显示模块
+        fold: true, // 控制内容概述的显示与否
 
     },
     audioPlayed: function(e) {
@@ -23,12 +26,13 @@ Page({
     ellipsis: function() {
         var value = !this.data.ellipsis;
         var tag = !this.data.introduce;
+        var unfold = !this.data.fold;
         this.setData({
-            ellipsis: value
+            ellipsis: value,
+            introduce: tag,
+            fold: unfold
         })
-        this.setData({
-            introduce: tag
-        })
+
     },
 
     intro_switch: function() {
@@ -109,7 +113,7 @@ Page({
     swichNav: function(e) {
 
         var that = this;
-
+        var tag;
         if (this.data.currentTab === e.target.dataset.current) {
             return false;
         } else {
@@ -117,30 +121,43 @@ Page({
                 currentTab: e.target.dataset.current
             })
         }
+        if (this.data.course == 1)
+            tag = 2;
+        else
+            tag = 1;
+        this.setData({
+            course: tag
+        })
     },
     buycourse: function(e) {
         console.log("进入购买");
         var that = this;
+        var t_lock = 1;
         console.log(that.data.current_courseid);
         wx.request({
-            url: app.globalData.myserveraddress, //仅为示例，并非真实的接口地址
-            method: 'POST',
-            data: {
-                "func_id": 7,
-                "courseid": that.data.current_courseid,
-                "openid": app.globalData.openid
-            },
-            header: {
-                'content-type': 'application/x-www-form-urlencoded'
-            }, // 设置请求的 header
-            success(res) {
-                console.log(res.data);
-                if (res.data.success == 1) { //与服务器交互成功
-                    wx.setStorageSync('pay_information', res.data); //支付的参数，存到缓存
-                    that.pay();
+                url: app.globalData.myserveraddress, //仅为示例，并非真实的接口地址
+                method: 'POST',
+                data: {
+                    "func_id": 7,
+                    "courseid": that.data.current_courseid,
+                    "openid": app.globalData.openid
+                },
+                header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                }, // 设置请求的 header
+                success(res) {
+                    console.log(res.data);
+                    if (res.data.success == 1) { //与服务器交互成功
+                        wx.setStorageSync('pay_information', res.data); //支付的参数，存到缓存
+                        that.pay();
+                    }
                 }
-            }
+            })
+            // TODO：支付成功则解锁,建议后续放在Pay()中
+        this.setData({
+            lock: 1
         })
+
     },
     pay: function(e) {
         console.log("进入支付");

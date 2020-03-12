@@ -6,6 +6,13 @@
     flex-direction: row;
 }*/
 
+.background {
+    width: 100%;
+    height: 36.11%;
+    position: ;
+    /* z-index: -1; */
+}
+
 .intro_list {
     width: 105%;
     height: 80rpx;
@@ -63,7 +70,7 @@
 
 .ellipsis {
     -webkit-line-clamp: 1;
-    opacity: 0.75
+    opacity: 0.00
 }
 
 .unellipsis {
@@ -85,10 +92,11 @@
 }
 
 .t_icon {
-    height: 50rpx;
-    width: 50rpx;
+    height: 120rpx;
+    width: 120rpx;
     margin-right: 20rpx;
     margin-left: 52rpx;
+    border-radius: 61rpx;
 }
 
 .my_intro {
@@ -101,7 +109,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: left;
-    margin-left: 15px;
+    margin-left: 36.5rpx;
 }
 
 .teacher_tr {
@@ -112,6 +120,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.teacher_note {
+    width: 100%;
+    height: 400rpx;
+    background-color: #FAFBFC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .teacher {
@@ -125,7 +145,7 @@
 
 .t_name {
     color: #000000;
-    font-size: 20px;
+    font-size: 48.6rpx;
     margin-right: 15rpx;
     /*  老师名字和名片间距  */
 }
@@ -138,6 +158,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
+    border-top: solid rgba(182, 182, 185, 0.1);
+    border-bottom: solid rgba(182, 182, 185, 0.1);
 }
 
 .td {
@@ -148,6 +170,50 @@
     padding: 10rpx;
     width: 50%;
     font-size: 26rpx;
+}
+
+.image-parent {
+    height: 300rpx;
+    position: relative;
+    /* border: 2rpx solid red; */
+    background-color: white;
+}
+
+.lock {
+    width: 82rpx;
+    height: 82rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.txt {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    line-height: 1.8;
+    /* 字间距 */
+    filter: blur(5rpx);
+    /* 虚化 */
+}
+
+.txt2 {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    line-height: 1.8;
+    /* 字间距 */
+    /* 无虚化 */
+}
+
+.tech_note {
+    width: 100%;
+    height: 100%;
+    font-size: 35rpx;
 }
 
 .bottom {
@@ -197,7 +263,6 @@
     text-align: center;
     line-height: 60rpx;
     border-bottom: 1rpx solid rgba(98, 100, 110, 0.2);
-    border-top: 12rpx solid rgba(182, 182, 185, 0.1);
 }
 
 .swiper-tab-list {
@@ -384,12 +449,14 @@
     flex-direction: row;
     margin: 0rpx 10rpx 0rpx 10rpx;
     border-radius: 20rpx;
-    border-bottom-style: solid;
-    border-right-style: solid;
+    /*  border-bottom-style: solid;
+    border-right-style: solid;  
     border-bottom-width: 7px;
     border-right-width: 5px;
     border-right-color: rgba(98, 100, 110, 0.15);
     border-bottom-color: rgba(98, 100, 110, 0.15);
+    边框实线以及对应的宽度，颜色设置，这里我们不需要了
+    */
 }
 
 
@@ -523,24 +590,58 @@ radio .wx-radio-input.wx-radio-input-checked::before {
     position: fixed;
     bottom: 0;
     border-top: gainsboro solid 2px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     background-color: white;
 }
 
 .back-to-course {
-    font-size: 15px;
+    font-size: 37rpx;
     color: gainsboro;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 46.8rpx;
+    margin-top: 45rpx;
+    margin-bottom: 23.4rpx;
+    width: 32%;
 }
 
 .go-to-answer {
-    font-size: 15px;
+    font-size: 37rpx;
     color: white;
-    background-color: gray;
+    background-color: #ffcf3b;
     margin-left: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 200px;
+    margin-top: 23.4rpx;
+    margin-bottom: 23.4rpx;
+    width: 28%;
 }
+
+.Go-to-answer {
+    font-size: 37rpx;
+    color: white;
+    background-color: #Fa6565;
+    margin-left: auto;
+    margin-top: 23.4rpx;
+    margin-bottom: 23.4rpx;
+    width: 56%;
+}
+
+.go-to-buy {
+    font-size: 37rpx;
+    color: white;
+    background-color: #07c160;
+    margin-left: auto;
+    margin-top: 23.4rpx;
+    margin-bottom: 23.4rpx;
+    width: 28%;
+}
+
+.continue-to-buy {
+    font-size: 37rpx;
+    color: white;
+    background-color: #Fa6565;
+    margin-left: auto;
+    margin-top: 23.4rpx;
+    margin-bottom: 23.4rpx;
+    width: 28%;
+}
+
+
+/* 在iphone5上 1rpx = 0.42px  1px = 2.34rpx */
